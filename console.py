@@ -51,7 +51,7 @@ class HBNBCommand(cmd.Cmd):
                     except KeyError:
                         print("** no instance found **")
                 else:
-                    self.stdout.write('*** Unknown syntax1: %s\n' % line)
+                    self.stdout.write('*** Unknown syntax: %s\n' % line)
             elif hbnb[1].startswith("destroy("):
                 if (hbnb[1])[-1] == ")":
                     arg = parse((hbnb[1])[8:-1])
@@ -62,7 +62,7 @@ class HBNBCommand(cmd.Cmd):
                     except KeyError:
                         print("** no instance found **")
                 else:
-                    self.stdout.write('*** Unknown syntax2: %s\n' % line)
+                    self.stdout.write('*** Unknown syntax: %s\n' % line)
             elif hbnb[1].startswith("update("):
                 if (hbnb[1])[-1] == ")":
                     arg = to_list(parse((hbnb[1])[6:]))
@@ -87,7 +87,7 @@ class HBNBCommand(cmd.Cmd):
                     else:
                         print("** no instance found **")
                 else:
-                    self.stdout.write('*** Unknown syntax3: %s\n' % line)
+                    self.stdout.write('*** Unknown syntax: %s\n' % line)
             elif hbnb[1] == "all()":
                 flag = 1
                 print("[", end="")
@@ -98,22 +98,12 @@ class HBNBCommand(cmd.Cmd):
                         print(obj, end="")
                         flag = 0
                 print("]")
-                # hbnb = hbnb.strip()
-                # obj_list = []
-                # if hbnb in HBNBCommand.__classes:
-                #     for obj in storage.all().values():
-                #         if isinstance(obj, globals()[hbnb]):
-                #             obj_list.append(obj.__str__())
-                #     print(obj_list)
-                # else:
-                #     print("** class doesn't exist **")
-                # self.do_all(hbnb[0])
             elif hbnb[1] == "count()":
                 self.do_count(hbnb[0])
             else:
-                self.stdout.write('*** Unknown syntax4: %s\n' % line)
+                self.stdout.write('*** Unknown syntax: %s\n' % line)
         else:
-            self.stdout.write('*** Unknown syntax5: %s\n' % line)
+            self.stdout.write('*** Unknown syntax: %s\n' % line)
 
     def do_EOF(self, hbnb):
         """
