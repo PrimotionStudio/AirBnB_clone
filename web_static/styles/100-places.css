@@ -89,6 +89,8 @@
 .places div.amenities ul,
 .places div.reviews ul {
 	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 .places div.amenities ul li {
 	width: 25px;
