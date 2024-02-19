@@ -11,7 +11,6 @@
 }
 .places article h2 {
 	font-size: 30px;
-	display: absolute;
 	text-align: center;
 }
 .places div {
@@ -23,7 +22,6 @@
 	color: #ff5a5f;
 	border: 4px solid #ff5a5f;
 	border-radius: 50%;
-	display: absolute;
 	align-items: center;
 	min-width: 60px;
 	width: 60px;
